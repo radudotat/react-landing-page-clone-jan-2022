@@ -1,3 +1,5 @@
+# This project is a React CLone of the https://www.chimpcharge.com/ landing page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
