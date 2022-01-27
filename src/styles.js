@@ -1,4 +1,4 @@
-import {css} from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const blueButton = css`
   padding: 0;
@@ -111,8 +111,6 @@ export const heroStyle = css`
   }
 `;
 
-
-
 export const heroScreenshot = css`
   text-align: center;
 
@@ -121,4 +119,3 @@ export const heroScreenshot = css`
     max-width: 1226px;
   }
 `;
-

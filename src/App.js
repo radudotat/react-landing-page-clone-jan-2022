@@ -1,10 +1,11 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
+
 // import Deco7 from './img/deco-7.svg';
 // import Deco9 from './img/deco-9.svg';
 // import DividerSharpBottom from './img/divider-sharp-bottom.svg';
-import { ReactComponent as FullLogoDark } from './img/full_logo_dark.svg';
+// import { ReactComponent as FullLogoDark } from './img/full_logo_dark.svg';
 
 // import ProductPreview from './img/product-preview.png';
 // import { heroScreenshot, logoStyle } from './styles.js';
@@ -106,14 +107,14 @@ function App() {
     }
   `;
 
-  const container = css`
+  /* const container = css`
      {
       width: 100%;
       max-width: 1272px;
       margin: 0 auto;
       padding: 0 36px;
     }
-  `;
+  `; */
 
   const topNoBottomSpace = css`
     padding-top: 60px;
@@ -324,25 +325,53 @@ function App() {
   const textBlock = css`
     padding: 0 24px;
   `;
+
+  const navigation = css``;
+  const wrapper = css``;
+  const subtitle = css``;
+  const buttonBox = css``;
+  const heading = css``;
+  const buttonBlock = css``;
+  const learnFlex = css``;
+  const text = css``;
+  const paragraphLarge = css``;
+  const textLarge = css``;
+  const image = css``;
+  const sectionCreateOnce = css``;
+  const flexedReverse = css``;
+  const sectionRecurringPayments = css``;
+  const sectionSecuredByStripe = css``;
+  const grid = css``;
+  const heading2 = css``;
+  const sectionReadyToStart = css``;
+  const productPreview = css``;
+  const leftBottom = css``;
+  const decorationsWrapper = css``;
+  const decorationLeft = css``;
+  const decorationCircle = css``;
+  const decorationDiamond = css``;
+  const leftTop = css``;
+  const rightTop = css``;
+  const decorationRight = css``;
+  const bottomRight = css``;
+  const cc = css``;
   return (
     <>
       <div css={{ navbar }}>
         <div css={{ wrapper }}>
           <div css={banner}>
             <div css={logo}>
-              <a href="#logo">
+              <a>
                 <img src="src/img/full_logo_dark.svg" alt="logo" />
               </a>
-              <a href="#powered">- By MicroAcquire</a>
+              <a>- By MicroAcquire</a>
             </div>
             <nav css={navigation}>
               <div>
-                <a href="#">How it works</a>
-                <a href="#">FAQs</a>
-                <a href="#">Pricing</a>
-                <a href="#" css={spaceLeft}>
-                  Log In
-                </a>
+                <a>How it works</a>
+                <a>FAQs</a>
+                <a>Pricing</a>
+                <a css={spaceLeft}>Log In</a>
               </div>
             </nav>
             <div css={button}>
@@ -367,7 +396,7 @@ function App() {
           <div css={{ buttonBox }}>
             <h6 css={{ heading }}>Get setup in minutes.</h6>
             <div css={{ buttonBlock }}>
-              <a href="#signup" css={{ button }}>
+              <a css={{ button }}>
                 <div>
                   <strong>Sign Up Free Forever</strong>
                 </div>
@@ -383,14 +412,14 @@ function App() {
           <div css={{ decorationContainer, leftBottom }}>
             <div css={decorationsWrapper}>
               <img src="src/img/deco-7.svg" alt="" css={{ decorationLeft }} />
-              <div css={{ decorationCircle, leftTop }}></div>
+              <div css={{ decorationCircle, leftTop }} />
             </div>
           </div>
         </div>
         <div css={{ decorationContainer, rightTop }}>
           <div css={{ decorationContainer, rightTop }}>
             <div css={{ decorationsWrapper }}>
-              <div css={{ decorationDiamond, bottomRight }}></div>
+              <div css={{ decorationDiamond, bottomRight }} />
               <img src="src/img/deco-9.svg" alt="" css={{ decorationRight }} />
             </div>
           </div>
@@ -510,8 +539,8 @@ function App() {
           </div>
         </div>
       </section>
-      <section css={{ sectionReadyToStart }}></section>
-      <footer></footer>
+      <section css={{ sectionReadyToStart }}>ss</section>
+      <footer>aa</footer>
     </>
   );
 }
