@@ -26,3 +26,5 @@ yarn-error.log*
 *.tsbuildinfo
 
 .idea
+App copy.js
+*.tsbuildinfo

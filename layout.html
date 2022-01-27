@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-smooth: always;
+            font-family: Helvetica, sans-serif;
+            color: #4f5c65;
+            font-size: 16px;
+            line-height: 24px;
+            height: 100%;
+            width: 100vw;
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #353e44;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        div.navbar {
+            background-color: #f7fafc;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        div.navbar:before, div.navbar:after {
+            content: " ";
+            display: table;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-column-end: 2;
+            grid-row-end: 2;
+        }
+
+        div.logo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: normal;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.logo img {
+            width: 191px;
+        }
+
+        div.banner {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: normal;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        div.banner .button {
+            display: flex;
+            margin-left: 5px;
+            flex: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px 0 #0087ee;
+            /*            font-size: 18px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        padding: 10px 24px;*/
+            border-style: solid;
+            border-width: 2px;
+            border-color: #0087ee;
+            background-color: #0087ee;
+            font-family: Helvetica, sans-serif;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        nav.navigation {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: normal;
+            justify-content: flex-end;
+            align-items: center;
+            float: right;
+        }
+
+        @media screen and (max-width: 991px) {
+            nav.navigation {
+                display: none;
+            }
+        }
+
+        nav.navigation a {
+            padding: 15px;
+        }
+
+        div.navbar .wrapper {
+            width: 100%;
+            max-width: 1272px;
+            margin: auto;
+            padding: 0 36px;
+        }
+
+        .spaceLeft {
+            margin-left: 40px;
+        }
+
+        .button a {
+            padding: 8px 9px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="wrapper">
+        <div class="banner">
+            <div class="logo">
+                <a href="#logo">
+                    <img src="src/img/full_logo_dark.svg" alt="logo"/>
+                </a>
+                <a href="#powered">- By MicroAcquire</a>
+            </div>
+            <nav class="navigation">
+                <div>
+                    <a href="#">How it works</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Pricing</a>
+                    <a href="#" class="spaceLeft">Log In</a>
+                </div>
+            </nav>
+            <div class="button">
+                <a><strong>Try it for free</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .topNoBottomSpace {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        position: relative;
+        background-color: #f7fafc;
+    }
+
+    .topNoBottomSpace .heroContainer,
+    .topNoBottomSpace .heroScreenshot {
+        width: 100%;
+        max-width: 1272px;
+        margin: 0 auto;
+        padding: 0 36px;
+    }
+
+    .heroContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: normal;
+        justify-content: normal;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroContainer h1 {
+        margin-bottom: 8px;
+        color: #353e44;
+        font-size: 64px;
+        line-height: 72px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+    }
+
+    .heroContainer .subtitle {
+        color: #4f5c65;
+        font-size: 20px;
+        font-weight: 400;
+        max-width: 690px;
+    }
+
+    .heroContainer .button-box {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: normal;
+        justify-content: normal;
+        align-items: normal;
+        text-align: center;
+    }
+
+    .heroContainer .button-block {
+        display: block;
+    }
+
+    .heroContainer .button-block a.button {
+        display: block;
+        margin: 5px 0;
+        padding: 10px 24px;
+        border: solid 2px #0087ee;
+        border-radius: 5px;
+        background-color: #0087ee;
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .heroContainer h6 {
+        display: flex;
+        justify-content: center;
+        color: #4f5c65;
+        font-size: 16px;
+        margin: 0px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    img.img-divider {
+        position: relative;
+        z-index: 1;
+        width: 100vw;
+        height: 4vw;
+        margin-bottom: -1em;
+    }
+
+    .heroScreenshot {
+        position: relative;
+        z-index: 2;
+        margin-top: 0px;
+        margin-bottom: 72px;
+        text-align: center;
+    }
+
+    .heroScreenshot img {
+        max-width: 1226px;
+        width: 100%;
+    }
+</style>
+<section class="topNoBottomSpace">
+    <div class="heroContainer">
+        <h1>Super simple invoicing,<br/>made for freelancers.</h1>
+        <div class="subtitle">The all-in-one tool to bill, manage, and automate your payments - so you can get paid
+            fast, from anywhere!
+        </div>
+        <div class="button-box">
+            <h6 class="heading-4">Get setup in minutes.</h6>
+            <div class="button-block">
+                <a href="#signup"
+                   class="button">
+                    <div>
+                        <strong>Sign Up Free Forever</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="heroScreenshot">
+        <img src="src/img/product-preview.png" alt="" class="product-preview">
+    </div>
+    <img src="src/img/divider-sharp-bottom.svg" alt="" class="img-divider"/>
+    <style>
+        .decoration-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: normal;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            z-index: 2;
+            overflow: hidden;
+            /*border: dotted 1px lime;*/
+        }
+
+        .decoration-container img {
+            display: inline-block;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .decoration-container.left-bottom {
+            align-items: flex-end;
+        }
+
+        .decoration-circle.left-top {
+            left: -12px;
+            top: 0px;
+        }
+
+        .decoration-container.right-top {
+            justify-content: flex-end;
+            opacity: 1;
+        }
+
+        .decorations-wrapper {
+            position: relative;
+        }
+
+        .decoration {
+            position: relative;
+            z-index: 1;
+            width: 12vw;
+        }
+
+        .decoration.right {
+            right: -12px;
+        }
+
+        .decoration-diamond.bottom-right {
+            position: absolute;
+            right: -2vw;
+            bottom: -2vw;
+        }
+
+        .decoration-diamond {
+            width: 6vw;
+            height: 6vw;
+            border-radius: 15px;
+            transform: rotate(45deg);
+            background-color: #0087ee;
+        }
+
+        .decoration-circle {
+            position: absolute;
+            width: 4vw;
+            height: 4vw;
+            border-radius: 50%;
+            background-color: #0fbf95;
+        }
+    </style>
+    <div class="decoration-container left-bottom">
+        <div class="decoration-container left-bottom">
+            <div class="decorations-wrapper"><img
+                    src="src/img/deco-7.svg"
+                    alt="" class="decoration left">
+                <div class="decoration-circle left-top bg-primary-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="decoration-container right-top">
+        <div class="decoration-container right-top">
+            <div class="decorations-wrapper">
+                <div class="decoration-diamond bottom-right bg-primary"></div>
+                <img src="src/img/deco-9.svg"
+                     alt="" class="decoration right"></div>
+        </div>
+    </div>
+</section>
+<style>
+    .sectionIcons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-basis: 24px;
+        padding-top: 60px;
+        padding-bottom: 0px;
+
+    }
+
+    .sectionIcons img {
+        min-width: 24px;
+        max-width: 40px;
+        width: 100%;
+        margin: 6px 40px 12px;
+        opacity: 0.5;
+    }
+
+    @media screen and (max-width: 479px) {
+        .sectionIcons img {
+            max-width: 24px;
+        }
+    }
+</style>
+<section class="sectionIcons">
+    <img src="src/img/slack.svg" alt=""/>
+    <img src="src/img/twitter.svg" alt=""/>
+    <img src="src/img/instagram.svg" alt=""/>
+    <img src="src/img/facebook.svg" alt=""/>
+    <img src="src/img/google.svg" alt=""/>
+    <img src="src/img/skype.svg" alt=""/>
+
+</section>
+
+<style>
+    .flexed > div {
+        margin: 0.2em;
+        border: dotted 1px lime;
+        flex: 1;
+    }
+
+    .flexed {
+        display: flex;
+        order: initial;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .flexed .text {
+        min-width: 480px;
+    }
+
+
+    @media screen and (max-width: 991px) {
+        .flexed .image > img {
+            width: 100%;
+            max-width: 340px;
+        }
+    }
+
+    .flexed .image > img {
+        width: 100%;
+        min-width: 430px;
+    }
+
+    @media screen and (min-width: 990px) {
+        .reverse > .text {
+            order: 1;
+            text-align: center;
+        }
+    }
+
+    .flexed .image > img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
+        max-width: 300px;
+        margin: auto;
+    }
+
+</style>
+<section class="learnFlex flexed">
+    <div class="text">
+        <h2>Simplify your payments</h2>
+        <p class="paragraph-large text-large">ChimpCharge replaces all those apps and complicated invoicing tools
+            that made it challenging to keep track of all your customers, and was a nightmare to manage your
+            payments.<br><br>Easily bill, manage, and automate all of your payments in one simple tool, so that you
+            can focus on growing your business.</p></div>
+    <div class="image">
+        <img src="src/img/before-after-tiny.png" alt="">
+    </div>
+</section>
+<section class="sectionCreateOnce flexed reverse">
+    <div class="text">
+        <h2>Create once, share everywhere</h2>
+        <p class="paragraph-large text-large">Easily create reusable payment links that you can share with your
+            customers through email, text message, social media, or anywhere your customers are.</p>
+        <p>Yep, it's that easy!</p>
+    </div>
+    <div class="image">
+        <img src="src/img/share-anywhere-tiny.png" alt="">
+    </div>
+</section>
+
+<section class="sectionRecurringPayments flexed">
+    <div class="text">
+        <h2>Recurring payments</h2>
+        <p class="paragraph-large text-large">Remove the complexity of creating a subscription-based business and
+            automatically charge customers on your own set schedule.</p>
+        <p>Manage all of your subscriptions with our comprehensive real-time dashboard, so you can track how payments
+            are flowing in your company.</p>
+    </div>
+    <div class="image">
+        <img src="src/img/dashboard-features-tiny.png" alt="">
+    </div>
+</section>
+
+<section class="sectionSecuredByStripe flexed reverse">
+    <div class="text">
+        <h2>Secured by Stripe</h2>
+        <p class="paragraph-large text-large">We partner with Stripe to offer the fastest and safest way for your
+            customers to pay you, from anywhere in the world.</p>
+        <p>Payments are sent directly to your bank account, so you can sit back and relax.</p>
+    </div>
+    <div class="image">
+        <img class="cc" src="src/img/Checkout-mobile.gif" alt="">
+        <img src="src/img/credit-cards.png" alt="">
+    </div>
+</section>
+
+<style>
+    .sectionHowItWorks .wrapper {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0 24px;
+    }
+
+    .sectionHowItWorks .wrapper .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .sectionHowItWorks h6 {
+        color: #4f5c65;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    .text-block {
+        padding: 0 24px;
+    }
+</style>
+<section class="sectionHowItWorks">
+    <div class="wrapper">
+        <h2 class="heading">How it works</h2>
+        <div class="grid">
+            <div><img
+                    src="src/img/how-it-works-1.png"
+                    width="114" alt=""><h6 class="heading-2">Create a payment link</h6>
+                <div class="text-block">Set the amount you want to charge, and whether it should be a one-time or
+                    recurring payment. <br><br>All<strong> </strong>under<strong> 15 seconds</strong>, yep, that's fast.
+                </div>
+            </div>
+            <div><img
+                    src="src/img/how-it-works-2.png"
+                    width="114" alt=""><h6 class="heading-2">Share your payment link</h6>
+                <div class="text-block">Add it to your website, share it through email, text-message, social media, or
+                    <strong>anywhere</strong> your customers are... even on the other side of the world.<br>‍
+                </div>
+            </div>
+            <div><img
+                    src="src/img/how-it-works-3.png"
+                    width="114" alt=""><h6 class="heading-2">Get paid</h6>
+                <div class="text-block">Accept all major credit &amp; debit cards. Deposited directly into your bank
+                    account.<br>‍<br>Now you can <strong>sit back and relax</strong>, while we take care of the
+                    rest.<br></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sectionReadyToStart"></section>
+<footer></footer>
+
+</body>
+</html>
